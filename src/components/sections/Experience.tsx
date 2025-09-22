@@ -85,41 +85,6 @@ export function Experience() {
           ))}
         </div>
 
-        <div className="mt-12">
-          <Card className="max-w-3xl mx-auto">
-            <CardHeader>
-              <CardTitle>Resume</CardTitle>
-              <CardDescription>
-                Download my complete resume for more details
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="flex justify-center">
-              <a
-                href="/resume.pdf"
-                download="Hazem_Khairat_Resume.pdf"
-                className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="mr-2"
-                >
-                  <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
-                  <polyline points="7 10 12 15 17 10" />
-                  <line x1="12" y1="15" x2="12" y2="3" />
-                </svg>
-                Download CV
-              </a>
-            </CardContent>
-          </Card>
-        </div>
       </div>
     </section>
   );
