@@ -9,7 +9,7 @@ interface SkillCategory {
 const skillCategories: SkillCategory[] = [
   {
     title: "Programming",
-    skills: ["C++", "Python", "JavaScript", "PHP", "Java", "SQL"],
+    skills: ["C++", "Python", "JavaScript", "TypeScript", "PHP", "Java", "SQL"],
   },
   {
     title: "Web Development",
@@ -20,8 +20,8 @@ const skillCategories: SkillCategory[] = [
     skills: ["MVC", "RESTful APIs", "Agile", "OOP", "Data Structures", "Algorithms"],
   },
   {
-    title: "Tools & Others",
-    skills: ["Git", "GitHub", "Linux", "Windows", "Problem-Solving", "Team Work"],
+    title: "Tools",
+    skills: ["Git", "GitHub", "Linux", "Postman", "Swagger", "Docker"],
   },
 ];
 

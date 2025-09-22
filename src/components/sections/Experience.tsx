@@ -17,7 +17,7 @@ interface Certificate {
 
 const certificates: Certificate[] = [
   {
-    title: "Full-Stack Web Development Diploma",
+    title: "Full-Stack Web Development",
     issuer: "Instant",
     date: "2023",
     link: "https://drive.google.com/file/d/1WdejMTGIKsyzFuycKg4xFvN6wS4MD1sy/view",
