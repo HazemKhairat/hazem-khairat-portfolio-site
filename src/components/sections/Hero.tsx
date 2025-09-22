@@ -14,7 +14,7 @@ export function Hero() {
             Hi, I'm <span className="text-primary">Hazem Khairat</span>
           </h1>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-medium mb-8">
-            A Full-Stack Developer
+            Full-Stack Developer
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-12">
             Building scalable web applications from front to back

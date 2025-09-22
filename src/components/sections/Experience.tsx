@@ -38,9 +38,9 @@ const certificates: Certificate[] = [
 
 export function Experience() {
   return (
-    <section id="experience" className="py-20">
+    <section id="achievement" className="py-20">
       <div className="section-container">
-        <h2 className="section-title">Certifications</h2>
+        <h2 className="section-title">Achievements</h2>
         <p className="section-subtitle">
           Professional development and certifications
         </p>
