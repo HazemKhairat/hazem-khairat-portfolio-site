@@ -45,7 +45,7 @@ export function Skills() {
                   {category.skills.map((skill, i) => (
                     <span
                       key={i}
-                      className="skill-badge dark:bg-primary/20 dark:text-primary-foreground"
+                      className="skill-badge"
                     >
                       {skill}
                     </span>

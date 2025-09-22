@@ -35,7 +35,7 @@ export function Education() {
                     Faculty of Computers and Artificial Intelligence
                   </CardTitle>
                   <p className="text-muted-foreground mt-1">
-                    Information Technology
+                    Information Technology • GPA: 3.2/4.0
                   </p>
                   <p className="text-sm text-muted-foreground mt-2">
                     09/2022 – 06/2026 • Beni-Suef, Egypt

@@ -10,10 +10,13 @@ export function About() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="space-y-6">
             <p className="text-lg">
-              I'm a FullStack developer with one year of experience in building web applications using technologies such as Laravel, MySQL and Angular. My competitive programming background has sharpened my problem-solving skills and algorithmic thinking.
+              Hi, I'm Hazem! I'm a Full-Stack Developer with one year of hands-on experience building web applications. My journey started with a passion for problem-solving through competitive programming, where I sharpened my algorithmic thinking and learned how to tackle challenges creatively.
             </p>
             <p className="text-lg">
-              Currently studying Information Technology at the Faculty of Computers and Artificial Intelligence, I'm passionate about delivering high-quality, reliable solutions and continuously learning new technologies.
+              Since then, I've worked with technologies like Laravel, MySQL, and Angular to create reliable, user-focused solutions. Alongside my technical work, I'm pursuing a degree in Information Technology at the Faculty of Computers and Artificial Intelligence.
+            </p>
+            <p className="text-lg">
+              What drives me? Building high-quality, efficient applications and continuously learning new technologies to stay ahead in this fast-paced field. Whether it's back-end logic or front-end design, I aim to deliver solutions that make an impact.
             </p>
           </div>
           <div className="flex flex-col gap-6">
