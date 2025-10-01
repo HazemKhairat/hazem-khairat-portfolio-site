@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -10,7 +9,8 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github } from "lucide-react";
-
+import courseManagementImg from "@/assets/course-management.png";
+import myDriveAppImg from "@/assets/mydrive-app.png";
 interface Project {
   title: string;
   description: string;
@@ -26,14 +26,14 @@ const projects: Project[] = [
     description: "Developed an MVC-based course management system for efficient course handling with secure user authentication and role-based authorization.",
     technologies: ["Laravel", "MySQL", "Bootstrap", "MVC", "PHP"],
     githubLink: "https://github.com/HazemKhairat/course-management-system",
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+    image: courseManagementImg
   },
   {
-    title: "File Management System",
+    title: "MyDrive App",
     description: "Built with Laravel and Breeze for user authentication. Implements authentication, authorization, and file access control. Users can upload, view, and download public/shared files.",
     technologies: ["Laravel", "MySQL", "Breeze", "File Management", "PHP"],
     githubLink: "https://github.com/HazemKhairat/user-drive-system",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+    image: myDriveAppImg
   },
 ];
 
@@ -52,11 +52,11 @@ export function Projects() {
               key={index}
               className="overflow-hidden card-hover"
             >
-              <div className="h-48 overflow-hidden">
+              <div className="h-48 overflow-hidden bg-muted">
                 <img
-                  src={`${project.image}?w=600&h=300&auto=format&fit=crop`}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                  src={project.image}
+                  alt={`${project.title} screenshot`}
+                  className="w-full h-full object-cover object-top transition-transform duration-300 hover:scale-105"
                 />
               </div>
               <CardHeader>
