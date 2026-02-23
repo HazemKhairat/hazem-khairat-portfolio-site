@@ -30,10 +30,13 @@ export function Hero() {
             </div>
           </div>
           <div className="flex-shrink-0">
-            <div className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl">
+            <div className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl" style={{ aspectRatio: '1/1' }}>
               <img
                 src={hazemPhoto}
                 alt="Hazem Khairat"
+                width={384}
+                height={384}
+                loading="eager"
                 className="w-full h-full object-cover object-top"
               />
             </div>
