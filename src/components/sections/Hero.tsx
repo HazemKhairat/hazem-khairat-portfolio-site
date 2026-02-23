@@ -1,6 +1,6 @@
-
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import hazemPhoto from "@/assets/hazem-photo.jpeg";
 
 export function Hero() {
   return (
@@ -9,23 +9,34 @@ export function Hero() {
       className="min-h-screen flex items-center justify-center pb-20 pt-32"
     >
       <div className="container mx-auto px-4">
-        <div className="flex flex-col items-center text-center animate-fade-in">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
-            Hi, I'm <span className="text-primary">Hazem Khairat</span>
-          </h1>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-medium mb-8">
-            Full-Stack Developer
-          </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-12">
-            Building scalable web applications from front to back
-          </p>
-          <div className="flex justify-center">
-            <Button className="group" size="lg" asChild>
-              <a href="#projects">
-                View Projects
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </a>
-            </Button>
+        <div className="flex flex-col md:flex-row items-center gap-12 animate-fade-in">
+          <div className="flex-1 text-center md:text-left">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
+              Hi, I'm <span className="text-primary">Hazem Khairat</span>
+            </h1>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-medium mb-8">
+              Full-Stack Developer
+            </h2>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-12">
+              Building scalable web applications from front to back
+            </p>
+            <div className="flex justify-center md:justify-start">
+              <Button className="group" size="lg" asChild>
+                <a href="#projects">
+                  View Projects
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </a>
+              </Button>
+            </div>
+          </div>
+          <div className="flex-shrink-0">
+            <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl">
+              <img
+                src={hazemPhoto}
+                alt="Hazem Khairat"
+                className="w-full h-full object-cover object-top"
+              />
+            </div>
           </div>
         </div>
       </div>
