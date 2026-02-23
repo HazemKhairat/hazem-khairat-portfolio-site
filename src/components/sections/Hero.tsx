@@ -30,7 +30,7 @@ export function Hero() {
             </div>
           </div>
           <div className="flex-shrink-0">
-            <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl">
+            <div className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl">
               <img
                 src={hazemPhoto}
                 alt="Hazem Khairat"
