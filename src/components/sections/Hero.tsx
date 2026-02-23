@@ -9,7 +9,7 @@ export function Hero() {
       className="min-h-screen flex items-center justify-center pb-20 pt-32"
     >
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center gap-12 animate-fade-in">
+        <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="flex-1 text-center md:text-left">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
               Hi, I'm <span className="text-primary">Hazem Khairat</span>
