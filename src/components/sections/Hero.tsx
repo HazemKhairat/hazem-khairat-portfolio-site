@@ -30,12 +30,11 @@ export function Hero() {
             </div>
           </div>
           <div className="flex-shrink-0">
-            <div className="group w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl">
+            <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-primary">
               <img
                 src={hazemPhoto}
                 alt="Hazem Khairat"
-                loading="eager"
-                className="w-full h-full object-cover object-center animate-fade-in transition-transform duration-300 group-hover:scale-110"
+                className="object-cover w-full h-full"
               />
             </div>
           </div>
