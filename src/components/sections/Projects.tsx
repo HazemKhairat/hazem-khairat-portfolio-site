@@ -8,8 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Github } from "lucide-react";
-import courseManagementImg from "@/assets/course-management.png";
+import { Globe, Github } from "lucide-react";
 import myDriveAppImg from "@/assets/mydrive-app.png";
 import sleekShopImg from "@/assets/sleekshop-cover.png";
 interface Project {
@@ -31,17 +30,11 @@ const projects: Project[] = [
     image: sleekShopImg
   },
   {
-    title: "Course Management System",
-    description: "Developed an MVC-based course management system for efficient course handling with secure user authentication and role-based authorization.",
-    technologies: ["Laravel", "MySQL", "Bootstrap", "MVC", "PHP"],
-    githubLink: "https://github.com/HazemKhairat/course-management-system",
-    image: courseManagementImg
-  },
-  {
     title: "MyDrive App",
     description: "Built with Laravel and Breeze for user authentication. Implements authentication, authorization, and file access control. Users can upload, view, and download public/shared files.",
     technologies: ["Laravel", "MySQL", "Breeze", "File Management", "PHP"],
     githubLink: "https://github.com/HazemKhairat/user-drive-system",
+    demoLink: "https://mydrive1.great-site.net/",
     image: myDriveAppImg
   },
 ];
@@ -100,7 +93,7 @@ export function Projects() {
                       rel="noopener noreferrer"
                       className="flex items-center"
                     >
-                      <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
+                      <Globe className="mr-2 h-4 w-4" /> Website
                     </a>
                   </Button>
                 )}
