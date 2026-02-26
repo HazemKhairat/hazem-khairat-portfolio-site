@@ -11,6 +11,7 @@ import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github } from "lucide-react";
 import courseManagementImg from "@/assets/course-management.png";
 import myDriveAppImg from "@/assets/mydrive-app.png";
+import sleekShopImg from "@/assets/sleekshop-cover.png";
 interface Project {
   title: string;
   description: string;
@@ -21,6 +22,14 @@ interface Project {
 }
 
 const projects: Project[] = [
+  {
+    title: "Sleek Shop",
+    description: "Built a responsive Angular e-commerce store with user authentication and secure login functionality. Implemented product catalog with search and filtering, and a shopping cart with quantity control.",
+    technologies: ["Angular", "JavaScript", "TypeScript", "Tailwind", "CI/CD", "Ecommerce"],
+    githubLink: "https://github.com/HazemKhairat/angular-ecommerce",
+    demoLink: "https://hazemkhairat.github.io/angular-ecommerce/#/",
+    image: sleekShopImg
+  },
   {
     title: "Course Management System",
     description: "Developed an MVC-based course management system for efficient course handling with secure user authentication and role-based authorization.",
