@@ -1,58 +1,51 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { AnimatedSection } from "@/components/AnimatedSection";
+import { GraduationCap, FileDown } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function Education() {
   return (
     <section id="education" className="py-20 bg-secondary/50">
       <div className="section-container">
-        <h2 className="section-title">Education</h2>
-        <p className="section-subtitle">
-          Academic background and learning journey
-        </p>
+        <AnimatedSection>
+          <h2 className="section-title">Education</h2>
+          <p className="section-subtitle">Academic background and learning journey</p>
+        </AnimatedSection>
 
-        <div className="max-w-2xl mx-auto mt-10">
-          <Card className="card-hover">
-            <CardHeader>
-              <div className="flex items-start gap-4">
-                <div className="bg-primary/10 p-3 rounded-full">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="text-primary"
-                  >
-                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
-                    <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" />
-                  </svg>
+        <AnimatedSection delay={0.1}>
+          <div className="max-w-2xl mx-auto mt-10">
+            <Card className="card-hover">
+              <CardHeader>
+                <div className="flex items-start gap-4">
+                  <div className="bg-primary/10 p-3 rounded-full">
+                    <GraduationCap className="h-6 w-6 text-primary" />
+                  </div>
+                  <div className="flex-1">
+                    <CardTitle className="text-xl">
+                      Faculty of Computers and Artificial Intelligence
+                    </CardTitle>
+                    <p className="text-muted-foreground mt-1">Information Technology</p>
+                    <p className="text-muted-foreground mt-1">GPA: 3.2/4.0</p>
+                    <p className="text-sm text-muted-foreground mt-2">
+                      Sep 2022 – Jun 2026 • Beni-Suef University, Egypt
+                    </p>
+                  </div>
                 </div>
-                <div className="flex-1">
-                  <CardTitle className="text-xl">
-                    Faculty of Computers and Artificial Intelligence
-                  </CardTitle>
-                  <p className="text-muted-foreground mt-1">
-                    Information Technology
-                  </p>
-                  <p className="text-muted-foreground mt-1">
-                    GPA: 3.2/4.0
-                  </p>
-                  <p className="text-sm text-muted-foreground mt-2">
-                    09/2022 – 06/2026 • Beni-Suef, Egypt
-                  </p>
-                </div>
-              </div>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground">
-                Currently pursuing a Bachelor's degree in Information Technology, focusing on software development, algorithms, and modern web technologies.
-              </p>
-            </CardContent>
-          </Card>
-        </div>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <p className="text-muted-foreground">
+                  Relevant Courses: Web Development, Data Structures, Algorithms, OOP, Databases.
+                </p>
+                <Button variant="outline" size="sm" asChild>
+                  <a href="/resume_hazem_khairat.pdf" download className="inline-flex items-center gap-2">
+                    <FileDown className="h-4 w-4" />
+                    Download Resume
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+        </AnimatedSection>
       </div>
     </section>
   );
