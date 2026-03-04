@@ -4,19 +4,22 @@ import { Code, Database, Layout, Server } from "lucide-react";
 
 export function About() {
   return (
-    <section id="about" className="py-20 bg-secondary/50">
+    <section id="about" className="py-24 bg-secondary/50">
       <div className="section-container">
         <h2 className="section-title">About Me</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <div className="space-y-6">
-            <p className="text-lg">
-              Hi, I'm Hazem! I'm a Full-Stack Developer with one year of hands-on experience building web applications. My journey started with a passion for problem-solving through competitive programming, where I sharpened my algorithmic thinking and learned how to tackle challenges creatively.
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="space-y-5 text-left">
+            <p className="text-lg leading-relaxed">
+              Hi, I'm Hazem — a Full-Stack Developer passionate about building efficient and scalable web applications.
             </p>
-            <p className="text-lg">
-              Since then, I've worked with technologies like Laravel, MySQL, and Angular to create reliable, user-focused solutions. Alongside my technical work, I'm pursuing a degree in Information Technology at the Faculty of Computers and Artificial Intelligence.
+            <p className="text-lg leading-relaxed text-muted-foreground">
+              My journey started with competitive programming in the ICPC community, where I developed strong problem-solving skills and algorithmic thinking. Since then, I've been building real-world projects using Laravel, MySQL, and Angular, focusing on clean architecture, performance, and user experience.
             </p>
-            <p className="text-lg">
-              What drives me? Building high-quality, efficient applications and continuously learning new technologies to stay ahead in this fast-paced field. Whether it's back-end logic or front-end design, I aim to deliver solutions that make an impact.
+            <p className="text-lg leading-relaxed text-muted-foreground">
+              Currently, I'm pursuing a degree in Information Technology at the Faculty of Computers and Artificial Intelligence. I enjoy turning complex problems into simple, intuitive solutions — whether it's designing robust back-end logic or crafting responsive front-end interfaces.
+            </p>
+            <p className="text-lg leading-relaxed text-muted-foreground">
+              I continuously refine my skills and explore modern technologies to deliver scalable and high-quality digital solutions.
             </p>
           </div>
           <div className="flex flex-col gap-6">
@@ -29,7 +32,7 @@ export function About() {
                 />
               </div>
             </div>
-            <h3 className="text-xl font-medium mb-4 text-center">Full-Stack Expertise</h3>
+            <h3 className="text-xl font-semibold mb-4 text-center">Full-Stack Expertise</h3>
             <div className="grid grid-cols-2 gap-4">
               <Card className="card-hover">
                 <CardContent className="flex flex-col items-center p-6">

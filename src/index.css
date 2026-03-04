@@ -59,19 +59,19 @@
   }
   
   .section-container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20;
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16;
   }
   
   .section-title {
-    @apply text-3xl md:text-4xl font-bold mb-6 text-center;
+    @apply text-3xl md:text-4xl font-bold mb-4 text-center tracking-tight;
   }
   
   .section-subtitle {
-    @apply text-xl text-muted-foreground mb-12 text-center max-w-2xl mx-auto;
+    @apply text-lg text-muted-foreground mb-12 text-center max-w-2xl mx-auto;
   }
   
   .card-hover {
-    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-primary/30;
   }
 
   .skill-badge {
