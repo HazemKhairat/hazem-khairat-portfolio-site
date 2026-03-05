@@ -6,34 +6,12 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
-import { Github, Linkedin, Mail, Phone, MessageSquare } from "lucide-react";
+import { Github, Linkedin, Mail, Phone } from "lucide-react";
 import { AnimatedSection } from "@/components/AnimatedSection";
-import { motion } from "framer-motion";
-
-interface Message {
-  name: string;
-  email: string;
-  message: string;
-  date: string;
-}
-
-function getMessages(): Message[] {
-  try {
-    return JSON.parse(localStorage.getItem("portfolio_messages") || "[]");
-  } catch { return []; }
-}
-
-function saveMessage(msg: Message) {
-  const messages = getMessages();
-  messages.unshift(msg);
-  localStorage.setItem("portfolio_messages", JSON.stringify(messages));
-}
 
 export function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showMessages, setShowMessages] = useState(false);
-  const [messages, setMessages] = useState<Message[]>(getMessages());
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -43,12 +21,9 @@ export function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    const newMsg: Message = { ...formData, date: new Date().toLocaleString() };
-    saveMessage(newMsg);
     setTimeout(() => {
       toast.success("Message sent successfully! I'll get back to you soon.");
       setFormData({ name: "", email: "", message: "" });
-      setMessages(getMessages());
       setIsSubmitting(false);
     }, 800);
   };
@@ -96,68 +71,28 @@ export function Contact() {
 
           <AnimatedSection delay={0.2}>
             <Card>
-              <CardHeader className="flex flex-row items-center justify-between">
-                <div>
-                  <CardTitle>Send Me a Message</CardTitle>
-                  <CardDescription>I'll get back to you as soon as possible</CardDescription>
-                </div>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={() => { setShowMessages(!showMessages); setMessages(getMessages()); }}
-                  className="relative"
-                >
-                  <MessageSquare className="h-5 w-5" />
-                  {messages.length > 0 && (
-                    <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                      {messages.length}
-                    </span>
-                  )}
-                </Button>
+              <CardHeader>
+                <CardTitle>Send Me a Message</CardTitle>
+                <CardDescription>I'll get back to you as soon as possible</CardDescription>
               </CardHeader>
               <CardContent>
-                {showMessages ? (
-                  <div className="space-y-3 max-h-80 overflow-y-auto">
-                    {messages.length === 0 ? (
-                      <p className="text-muted-foreground text-center py-4">No messages yet.</p>
-                    ) : (
-                      messages.map((msg, i) => (
-                        <motion.div
-                          key={i}
-                          initial={{ opacity: 0, y: 10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ delay: i * 0.05 }}
-                          className="p-3 rounded-lg bg-secondary/80 border text-left"
-                        >
-                          <div className="flex justify-between items-center mb-1">
-                            <span className="font-medium text-sm">{msg.name}</span>
-                            <span className="text-xs text-muted-foreground">{msg.date}</span>
-                          </div>
-                          <p className="text-xs text-muted-foreground">{msg.email}</p>
-                          <p className="text-sm mt-1">{msg.message}</p>
-                        </motion.div>
-                      ))
-                    )}
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium mb-1">Name</label>
+                    <Input id="name" name="name" value={formData.name} onChange={handleChange} placeholder="Your name" required />
                   </div>
-                ) : (
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium mb-1">Name</label>
-                      <Input id="name" name="name" value={formData.name} onChange={handleChange} placeholder="Your name" required />
-                    </div>
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium mb-1">Email</label>
-                      <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} placeholder="Your email address" required />
-                    </div>
-                    <div>
-                      <label htmlFor="message" className="block text-sm font-medium mb-1">Message</label>
-                      <Textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="Your message" rows={5} required />
-                    </div>
-                    <Button type="submit" className="w-full" disabled={isSubmitting}>
-                      {isSubmitting ? "Sending..." : "Send Message"}
-                    </Button>
-                  </form>
-                )}
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium mb-1">Email</label>
+                    <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} placeholder="Your email address" required />
+                  </div>
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium mb-1">Message</label>
+                    <Textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="Your message" rows={5} required />
+                  </div>
+                  <Button type="submit" className="w-full" disabled={isSubmitting}>
+                    {isSubmitting ? "Sending..." : "Send Message"}
+                  </Button>
+                </form>
               </CardContent>
             </Card>
           </AnimatedSection>
