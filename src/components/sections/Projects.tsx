@@ -42,7 +42,7 @@ const projects: Project[] = [
     description:
       "Built a comprehensive collection of 22 interactive web applications mastering Vanilla JavaScript. Developed a Snake game using Linked List for O(1) movement. Implemented Debouncing, Lazy Loading, and more.",
     technologies: ["JavaScript", "HTML5", "CSS3", "DOM"],
-    githubLink: "https://github.com/HazemKhairat",
+    githubLink: "https://github.com/HazemKhairat/FrontEndEval-Challenges",
     image: frontendEvalImg,
   },
 ];
