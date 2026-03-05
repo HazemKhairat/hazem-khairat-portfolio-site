@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Terminal, Github, Linkedin, Mail, Eye, FileDown } from "lucide-react";
+import { ArrowRight, Terminal, Github, Linkedin, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 import hazemPhoto from "@/assets/hazem-photo.jpeg";
 
@@ -59,26 +59,11 @@ export function Hero() {
               </motion.a>
             </div>
 
-            <div className="flex flex-wrap justify-center md:justify-start gap-3">
+            <div className="flex justify-center md:justify-start gap-4">
               <Button className="group" size="lg" asChild>
                 <a href="#projects">
                   View Projects
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </a>
-              </Button>
-              <Button variant="outline" size="lg" asChild>
-                <a href="#contact">Get in Touch</a>
-              </Button>
-              <Button variant="outline" size="lg" asChild>
-                <a href="/resume_hazem_khairat.pdf" target="_blank" rel="noopener noreferrer">
-                  <Eye className="mr-2 h-4 w-4" />
-                  Preview Resume
-                </a>
-              </Button>
-              <Button variant="secondary" size="lg" asChild>
-                <a href="/resume_hazem_khairat.pdf" download>
-                  <FileDown className="mr-2 h-4 w-4" />
-                  Download Resume
                 </a>
               </Button>
             </div>
