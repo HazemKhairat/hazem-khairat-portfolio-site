@@ -7,6 +7,7 @@ import { Globe, Github } from "lucide-react";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import myDriveAppImg from "@/assets/mydrive-app.png";
 import sleekShopImg from "@/assets/sleekshop-cover.png";
+import frontendEvalImg from "@/assets/frontendeval-labs.png";
 
 interface Project {
   title: string;
@@ -42,6 +43,7 @@ const projects: Project[] = [
       "Built a comprehensive collection of 22 interactive web applications mastering Vanilla JavaScript. Developed a Snake game using Linked List for O(1) movement. Implemented Debouncing, Lazy Loading, and more.",
     technologies: ["JavaScript", "HTML5", "CSS3", "DOM"],
     githubLink: "https://github.com/HazemKhairat",
+    image: frontendEvalImg,
   },
 ];
 
