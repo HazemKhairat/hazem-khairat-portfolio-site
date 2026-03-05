@@ -1,7 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { AnimatedSection } from "@/components/AnimatedSection";
-import { GraduationCap, FileDown } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { GraduationCap } from "lucide-react";
 
 export function Education() {
   return (
@@ -36,12 +35,6 @@ export function Education() {
                 <p className="text-muted-foreground">
                   Relevant Courses: Web Development, Data Structures, Algorithms, OOP, Databases.
                 </p>
-                <Button variant="outline" size="sm" asChild>
-                  <a href="/resume_hazem_khairat.pdf" download className="inline-flex items-center gap-2">
-                    <FileDown className="h-4 w-4" />
-                    Download Resume
-                  </a>
-                </Button>
               </CardContent>
             </Card>
           </div>
